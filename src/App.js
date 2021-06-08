@@ -56,7 +56,7 @@ class App extends Component {
     return (
       <div className="wrapper">
 
-        {/* <nav className="navbar navbar-expand navbar-dark bg-dark">
+        <nav className="navbar navbar-expand navbar-dark bg-dark">
           <Link to={"/"} className="navbar-brand">
             Hello Pets
           </Link>
@@ -120,7 +120,7 @@ class App extends Component {
               </li>
             </div>
           )}
-        </nav> */}
+        </nav>
 
         {/* <Header />
         <Menu /> */}
