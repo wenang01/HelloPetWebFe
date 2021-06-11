@@ -1,4 +1,14 @@
 import React, { Component } from 'react'
+import { Switch, Route, Redirect, Link } from 'react-router-dom'
+
+import Login from "../login.component";
+import Register from "../register.component";
+import Home from "../home.component";
+import Profile from "../profile.component";
+import BoardUser from "../board-user.component";
+import BoardModerator from "../board-moderator.component";
+import BoardAdmin from "../board-admin.component";
+import AddProduct from "./products.component/addproduct.component";
 
 export default class Menu extends Component {
   render() {
@@ -30,21 +40,21 @@ export default class Menu extends Component {
                   <a href="#" className="nav-link active">
                     <i className="nav-icon fas fa-tachometer-alt" />
                     <p>
-                      Dashboard
+                      Products
                 <i className="right fas fa-angle-left" />
                     </p>
                   </a>
                   <ul className="nav nav-treeview">
                     <li className="nav-item">
-                      <a href="./index.html" className="nav-link active">
+                      <Link to="/products/add" className="nav-link active">
                         <i className="far fa-circle nav-icon" />
-                        <p>Dashboard v1</p>
-                      </a>
+                        <p>Products List</p>
+                      </Link>
                     </li>
                     <li className="nav-item">
                       <a href="./index2.html" className="nav-link">
                         <i className="far fa-circle nav-icon" />
-                        <p>Dashboard v2</p>
+                        <p>Add Product</p>
                       </a>
                     </li>
                     <li className="nav-item">
@@ -544,6 +554,22 @@ export default class Menu extends Component {
           </div>
           {/* /.sidebar */}
         </aside>
+        {/* <Switch>
+          <Route exact path={["/", "/home"]} component={Home} />
+          <Route exact path="/login" component={Login} />
+          <Route exact path="/register" component={Register} />
+          <Route exact path="/profile" component={Profile} />
+          <Route path="/user" component={BoardUser} />
+          <Route path="/mod" component={BoardModerator} />
+          <Route exact path="/admin" component={BoardAdmin} />
+
+          <Route exact path="/products/add" component={BoardAdmin} />
+
+          <Redirect exact from="/" to="/login" />
+          <Route path="/login" component={Login} />
+          <Route path="/chat" component={Groupchat} />
+
+        </Switch> */}
       </div>
 
     )

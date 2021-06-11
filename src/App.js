@@ -20,7 +20,7 @@ import Header from "./components/admin.dashboard.component/Header";
 import Menu from "./components/admin.dashboard.component/Menu";
 import Footer from "./components/admin.dashboard.component/Footer";
 
-import Groupchat from "./components/chat/Groupchat.js";
+// import Groupchat from "./components/chat/Groupchat.js";
 
 class App extends Component {
   constructor(props) {
@@ -56,7 +56,7 @@ class App extends Component {
     return (
       <div className="wrapper">
 
-        <nav className="navbar navbar-expand navbar-dark bg-dark">
+        {/* <nav className="navbar navbar-expand navbar-dark bg-dark">
           <Link to={"/"} className="navbar-brand">
             Hello Pets
           </Link>
@@ -120,7 +120,7 @@ class App extends Component {
               </li>
             </div>
           )}
-        </nav>
+        </nav> */}
 
         {/* <Header />
         <Menu /> */}
@@ -136,7 +136,7 @@ class App extends Component {
 
             <Redirect exact from="/" to="/login" />
             <Route path="/login" component={Login} />
-            <Route path="/chat" component={Groupchat} />
+            {/* <Route path="/chat" component={Groupchat} /> */}
 
           </Switch>
         </div>
